@@ -1,9 +1,26 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <ApplicationIcon />
-    <Win32Resource />
+    <Configurations>Debug;Release</Configurations>
+    <Authors>Yong Jian Ming</Authors>
+    <Company>The Dialga Team</Company>
+    <Description>Extensions function for Microsoft.Extensions.DependencyInjection</Description>
+    <DebugType>embedded</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <AssemblyName>TheDialgaTeam.Microsoft.Extensions.DependencyInjection</AssemblyName>
+    <PackageId>TheDialgaTeam.Microsoft.Extensions.DependencyInjection</PackageId>
+    <Product>TheDialgaTeam.Microsoft.Extensions.DependencyInjection</Product>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
   </PropertyGroup>
 
   <ItemGroup>

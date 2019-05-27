@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace TheDialgaTeam.Microsoft.Extensions.DependencyInjection
@@ -17,7 +18,7 @@ namespace TheDialgaTeam.Microsoft.Extensions.DependencyInjection
         {
             var services = serviceProvider.GetServices<IDisposable>();
 
-            foreach (var service in services)
+            foreach (var service in services.Reverse())
                 service.Dispose();
         }
     }
