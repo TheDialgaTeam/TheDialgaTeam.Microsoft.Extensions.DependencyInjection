@@ -3,7 +3,10 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace TheDialgaTeam.Microsoft.Extensions.DependencyInjection
 {
-    public static class ServiceCollectionServiceExtensions
+    /// <summary>
+    /// Class containing Service Collection extension functions.
+    /// </summary>
+    public static class ServiceCollectionExtensions
     {
         public static IServiceCollection AddInterfacesAndSelfAsSingleton<TService>(this IServiceCollection serviceCollection) where TService : class
         {

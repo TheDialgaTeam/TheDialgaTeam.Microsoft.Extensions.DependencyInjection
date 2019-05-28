@@ -1,16 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <AssemblyName>TheDialgaTeam.Microsoft.Extensions.DependencyInjection</AssemblyName>
+    <RootNamespace>TheDialgaTeam.Microsoft.Extensions.DependencyInjection</RootNamespace>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Configurations>Debug;Release</Configurations>
+    <PackageId>TheDialgaTeam.Microsoft.Extensions.DependencyInjection</PackageId>
+    <Version>0.0.1.0</Version>
     <Authors>Yong Jian Ming</Authors>
     <Company>The Dialga Team</Company>
+    <Product>TheDialgaTeam.Microsoft.Extensions.DependencyInjection</Product>
     <Description>Extensions function for Microsoft.Extensions.DependencyInjection</Description>
+    <PackageProjectUrl>https://github.com/TheDialgaTeam/TheDialgaTeam.Microsoft.Extensions.DependencyInjection</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TheDialgaTeam/TheDialgaTeam.Microsoft.Extensions.DependencyInjection</RepositoryUrl>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DebugType>embedded</DebugType>
     <DebugSymbols>true</DebugSymbols>
-    <AssemblyName>TheDialgaTeam.Microsoft.Extensions.DependencyInjection</AssemblyName>
-    <PackageId>TheDialgaTeam.Microsoft.Extensions.DependencyInjection</PackageId>
-    <Product>TheDialgaTeam.Microsoft.Extensions.DependencyInjection</Product>
+    <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
