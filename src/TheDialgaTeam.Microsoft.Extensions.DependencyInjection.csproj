@@ -15,7 +15,6 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DebugType>embedded</DebugType>
     <DebugSymbols>true</DebugSymbols>
-    <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
