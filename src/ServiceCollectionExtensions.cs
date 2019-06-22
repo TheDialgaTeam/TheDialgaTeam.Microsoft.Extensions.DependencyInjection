@@ -26,6 +26,9 @@ namespace TheDialgaTeam.Microsoft.Extensions.DependencyInjection
             if (serviceCollection == null)
                 throw new ArgumentNullException(nameof(serviceCollection));
 
+            if (implementationInstance == null)
+                throw new ArgumentNullException(nameof(implementationInstance));
+
             serviceCollection.AddSingleton(implementationInstance);
 
             foreach (var type in typeof(TService).GetInterfaces())

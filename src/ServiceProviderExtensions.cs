@@ -27,9 +27,9 @@ namespace TheDialgaTeam.Microsoft.Extensions.DependencyInjection
 
         public static void DisposeServices(this IServiceProvider serviceProvider)
         {
-            var services = serviceProvider.GetServices<IDisposable>();
+            var services = serviceProvider.GetServices<IDisposable>().Reverse();
 
-            foreach (var service in services.Reverse())
+            foreach (var service in services)
                 service.Dispose();
         }
     }
