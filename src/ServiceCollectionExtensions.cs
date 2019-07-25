@@ -16,7 +16,23 @@ namespace TheDialgaTeam.Microsoft.Extensions.DependencyInjection
             serviceCollection.AddSingleton<TService>();
 
             foreach (var type in typeof(TService).GetInterfaces())
-                serviceCollection.AddSingleton(type, a => a.GetService<TService>());
+                serviceCollection.AddSingleton(type, a => a.GetRequiredService<TService>());
+
+            return serviceCollection;
+        }
+
+        public static IServiceCollection AddInterfacesAndSelfAsSingleton<TService>(this IServiceCollection serviceCollection, Func<IServiceProvider, TService> implementationFactory) where TService : class
+        {
+            if (serviceCollection == null)
+                throw new ArgumentNullException(nameof(serviceCollection));
+
+            if (implementationFactory == null)
+                throw new ArgumentNullException(nameof(implementationFactory));
+
+            serviceCollection.AddSingleton(implementationFactory);
+
+            foreach (var type in typeof(TService).GetInterfaces())
+                serviceCollection.AddSingleton(type, a => a.GetRequiredService<TService>());
 
             return serviceCollection;
         }
